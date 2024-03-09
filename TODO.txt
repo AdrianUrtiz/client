@@ -1,0 +1,55 @@
+[!] Hay que revisarlo
+[?] Casi terminado
+[X] Terminado
+
+* HOME PAGE *
+[] Logo de la DPII
+[x] Agregar enlances para oferta academica y contacto
+[x] Agregar boton de mostrar mas sitios de interes
+[x] Delimitar a 4 tarjetas de sitios de interes
+
+* DIRECTORIO *
+[x] Poner paginación
+
+* SITIOS DE INTERÉS *
+[x] Agregar la funcionalidad de las noticias
+
+* ORGANIGRAMA *
+[x] Poner paginación
+[x] Z-index del modal
+
+* CONVOCATORIAS *
+[x] Link para mostrar todas las convocatorias
+[x] Agregar paginación
+
+* NOTICIAS *
+[x] Margen en al momento de mostrar noticia individual
+[x] Reducir tamaño de las imagenes dentro de la noticia en pantalla pequeña
+
+* FOOTER *
+[x] Arreglar los links
+[] Poner links hacia las redes sociales fb, twitter, etc
+[x] Cambiar el link de productitivdad por noticias
+[x] Links de iconos margen en diseño responsive
+
+* STRAPI *
+[x] Cambiar idioma de la admin
+[x] Cambiar Directorio por Departamento y Organigrama por Personal
+[] Checar texto de los inputs
+
+* IMAGENES DE LAS SECCIONES *
+[] Agregar la opción CRUD de las imagenes por seccion
+
+* NAVBAR* 
+[x] Agregar animación al momento de hacer scroll
+
+* EXTRA *
+[x] Preguntar sobre la pantalla de los posgrados 
+[x] Agregar el paginado al directorio
+[x] Agregar el paginado al organigrama
+[x] Extraer el HEAD y las imágenes de las paginas separadas en componentes
+[] Ver si se pueden crear componentes para los dropdowns
+[x] Extraer div que contenga cards en un componente
+ 
+*PRODUCCION*
+Quitar UPLOADS de la pagina noticia individiual

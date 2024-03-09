@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-blue {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#1b396a, #1b396a);
+}
+
+.link-underline:hover {
+  background-size: 100% 2px;
+  background-position: 0 100%;
+}
+
+.gradient-bg {
+  background-color: #1b396a;
+  background-image: linear-gradient(121deg, transparent 85%, #234986 85%),
+    linear-gradient(51deg, #234986 15%, transparent 15%);
+}
+
+.avisos-slider .swiper-button-next,
+.avisos-slider .swiper-button-prev {
+  @apply text-white hidden md:block;
+}
+
+.avisos-slider .swiper-pagination-bullet-active {
+  @apply bg-white z-20;
+}
+
+.sitios-interes-slider .swiper-button-next,
+.sitios-interes-slider .swiper-button-prev {
+  @apply hidden md:block text-blue-800;
+}
+
+df-messenger {
+  --df-messenger-bot-message: #1B396A;
+  --df-messenger-button-titlebar-color: #1B396A;
+  --df-messenger-button-titlebar-font-color: #fff;
+  --df-messenger-chat-background-color: #fff;
+  --df-messenger-font-color: #fff;
+  --df-messenger-user-message: #f5f5f5;
+  --df-messenger-user-message: #172a52;
+
+  --df-messenger-input-box-color: #fff;
+  --df-messenger-input-font-color: #1B396A;
+  --df-messenger-input-placeholder-font-color: #a5a5a5;
+  --df-messenger-minimized-chat-close-icon-color: #1B396A;
+  --df-messenger-send-icon: #1B396A;
+}
