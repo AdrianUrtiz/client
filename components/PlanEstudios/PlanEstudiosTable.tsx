@@ -1,17 +1,17 @@
-import React, { Fragment } from "react";
-import { OfertaAcedemica } from "../../ts/interfaces";
+import React, { Fragment } from 'react'
+import { OfertaAcedemica } from '../../ts/interfaces'
 
 interface PlanEstudiosTableProps {
-  ofertaAcademicaState: OfertaAcedemica[];
+  ofertaAcademicaState: OfertaAcedemica[]
 }
 
 function PlanEstudiosTable({ ofertaAcademicaState }: PlanEstudiosTableProps) {
   return (
     <Fragment>
-      <table className="w-full table-fixed mt-8">
-        <thead className="text-white">
-          <tr className="w-full bg-darkBlue text-center">
-            <th className="py-5">Plantel</th>
+      <table className='w-full table-fixed mt-8'>
+        <thead className='text-white'>
+          <tr className='w-full bg-darkBlue text-center'>
+            <th className='py-5'>Plantel</th>
             <th>Programa</th>
             <th>Clave Oficial</th>
             <th>Modalidad</th>
@@ -21,46 +21,46 @@ function PlanEstudiosTable({ ofertaAcademicaState }: PlanEstudiosTableProps) {
         <tbody>
           {ofertaAcademicaState
             ? ofertaAcademicaState.map(({ attributes }) => {
-                const planteles = attributes.plantels;
+                const planteles = attributes.plantels
                 return planteles?.data.map((plantel: any) => {
                   return (
                     <tr
                       key={plantel.id}
-                      className="min-h-full h-auto odd:bg-blue-700/10 even:bg-white border-y-2 text-center"
-                    >
-                      <td className="p-8">
+                      className='min-h-full h-auto odd:bg-blue-700/10 even:bg-white border-y-2 text-center'>
+                      <td className='p-8'>
                         {plantel.attributes.nombrePlantel}
                       </td>
                       <td>{attributes.nombrePosgrado}</td>
                       <td>
                         {attributes.claveOficial
                           ? attributes.claveOficial
-                          : "-"}
+                          : '-'}
                       </td>
                       <td>{attributes.modalidad}</td>
                       <td>
                         <a
+                          className='flex justify-center items-center gap-x-2'
                           href={plantel.attributes.link}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="bx bx-link-alt text-darkBlue text-xl"></i>
+                          target='_blank'
+                          rel='noreferrer'>
+                          <span className='hover:underline'>Enlace</span>
+                          <i className='bx bx-link-alt text-darkBlue text-xl'></i>
                         </a>
                       </td>
                     </tr>
-                  );
-                });
+                  )
+                })
               })
             : null}
         </tbody>
       </table>
       {ofertaAcademicaState.length === 0 && (
-        <p className="text-center py-5 bg-blue-700/10 text-darkBlue font-semibold">
+        <p className='text-center py-5 bg-blue-700/10 text-darkBlue font-semibold'>
           No se encontraron resultados para esta búsqueda
         </p>
       )}
     </Fragment>
-  );
+  )
 }
 
-export default PlanEstudiosTable;
+export default PlanEstudiosTable
