@@ -24,7 +24,8 @@ const showIcon = (ext: string): JSX.Element => {
       alt = "xlsx-file";
       break;
 
-    case ".jpg" || ".png":
+    case ".jpg":
+    case ".png":
       image = MEDIA.PICTURE;
       alt = "docx-file";
       break;
