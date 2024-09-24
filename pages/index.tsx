@@ -42,32 +42,54 @@ const Home: NextPage<HomeProps> = ({
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const [avisosRes, noticiasRes, preguntasFrecuentesRes, sitiosInteresRes] =
-    await Promise.all([
-      fetch(`${SERVER}${AVISOS}${IMAGE_POPULATE}`),
-      fetch(
-        `${SERVER}${NOTICIAS}${IMAGE_POPULATE}${PAGINATION_LIMIT}4${SORT_NOTICIAS}`
-      ),
-      fetch(`${SERVER}${PREGUNTAS_FRECUENTES}`),
-      fetch(`${SERVER}${SITIOS_INTERES}${IMAGE_POPULATE}${PAGINATION_LIMIT}4`),
-    ]);
+  try {
+    const [avisosRes, noticiasRes, preguntasFrecuentesRes, sitiosInteresRes] =
+      await Promise.all([
+        fetch(`${SERVER}${AVISOS}${IMAGE_POPULATE}`),
+        fetch(
+          `${SERVER}${NOTICIAS}${IMAGE_POPULATE}${PAGINATION_LIMIT}4${SORT_NOTICIAS}`
+        ),
+        fetch(`${SERVER}${PREGUNTAS_FRECUENTES}`),
+        fetch(
+          `${SERVER}${SITIOS_INTERES}${IMAGE_POPULATE}${PAGINATION_LIMIT}4`
+        ),
+      ]);
 
-  const [avisos, noticias, preguntasFrecuentes, sitiosInteres] =
-    await Promise.all([
-      avisosRes.json(),
-      noticiasRes.json(),
-      preguntasFrecuentesRes.json(),
-      sitiosInteresRes.json(),
-    ]);
+    if (
+      !avisosRes.ok ||
+      !noticiasRes.ok ||
+      !preguntasFrecuentesRes.ok ||
+      !sitiosInteresRes.ok
+    ) {
+      throw new Error("Failed to fetch data");
+    }
 
-  return {
-    props: {
-      avisos: avisos.data,
-      noticias: noticias.data,
-      preguntasFrecuentes: preguntasFrecuentes.data,
-      sitiosInteres: sitiosInteres.data,
-    },
-  };
+    const [avisos, noticias, preguntasFrecuentes, sitiosInteres] =
+      await Promise.all([
+        avisosRes.json(),
+        noticiasRes.json(),
+        preguntasFrecuentesRes.json(),
+        sitiosInteresRes.json(),
+      ]);
+
+    return {
+      props: {
+        avisos: avisos.data,
+        noticias: noticias.data,
+        preguntasFrecuentes: preguntasFrecuentes.data,
+        sitiosInteres: sitiosInteres.data,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        avisos: [],
+        noticias: [],
+        preguntasFrecuentes: [],
+        sitiosInteres: [],
+      },
+    };
+  }
 };
 
 export default Home;
