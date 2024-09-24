@@ -18,9 +18,9 @@ const NOTICIAS_BG = "/noticias.jpg";
 const DIRECTORIO_BG = "/directorio.jpg";
 const ORGANIGRAMA_BG = "/organigrama.jpg";
 const PROFILE_IMG = "/profile.jpg";
-const TECNOLOGICO = "/tecnologico.png"; // Nueva imagen
+const ITM = "/logo-itm.png"; // Nueva imagen
 const RIZOMA = "/rizoma.png"; // Nueva imagen
-const EDUCACION = "/educacion.png"; // Nueva imagen
+const EDUCACION = "/LogoBlancoGrande.png"; // Nueva imagen
 const CVU_TECNM = "/cvu-tecnm.png"; // Nueva imagen
 
 const MEDIA = {
@@ -44,10 +44,10 @@ const MEDIA = {
   DIRECTORIO_BG,
   ORGANIGRAMA_BG,
   PROFILE_IMG,
-  TECNOLOGICO, 
   RIZOMA, 
   EDUCACION, 
   CVU_TECNM, 
+  ITM,
 };
 
 export { MEDIA };

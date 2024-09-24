@@ -19,7 +19,7 @@ function NavTop() {
                 <a className='hidden md:flex'>
                   <Image
                     width={160}
-                    height={56}
+                    height={80}
                     src={MEDIA.EDUCACION}
                     alt={MEDIA.EDUCACION}
                   />
@@ -36,14 +36,14 @@ function NavTop() {
                   />
                 </a>
               </Link>
-              {/* Logo: Tecnologico */}
+              {/* Logo: ITM */}
               <Link href='/'>
                 <a className='hidden md:flex'>
                   <Image
-                    width={160}
-                    height={56}
-                    src={MEDIA.TECNOLOGICO}
-                    alt={MEDIA.TECNOLOGICO}
+                    width={80}
+                    height={80}
+                    src={MEDIA.ITM}
+                    alt={MEDIA.ITM}
                   />
                 </a>
               </Link>
