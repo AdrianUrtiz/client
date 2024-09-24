@@ -1,8 +1,8 @@
-import React from 'react'
-import { Swiper as SwiperJSX } from 'swiper/react'
-import { ChildrenJSXProps } from '../ts/interfaces'
-import { Autoplay, Navigation, Pagination } from 'swiper'
-import styled from 'styled-components'
+import React from "react";
+import { Swiper as SwiperJSX } from "swiper/react";
+import { ChildrenJSXProps } from "../ts/interfaces";
+import { Autoplay, Navigation, Pagination } from "swiper";
+import styled from "styled-components";
 
 const StyledSwiper = styled(SwiperJSX)`
   & .swiper-button-next,
@@ -18,7 +18,7 @@ const StyledSwiper = styled(SwiperJSX)`
     cursor: pointer;
     color: white;
   }
-`
+`;
 
 function Swiper({ children }: ChildrenJSXProps) {
   return (
@@ -26,7 +26,7 @@ function Swiper({ children }: ChildrenJSXProps) {
       slidesPerView={1}
       spaceBetween={30}
       autoplay={{
-        delay: 2000,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       loop={true}
@@ -35,10 +35,11 @@ function Swiper({ children }: ChildrenJSXProps) {
       }}
       navigation={true}
       modules={[Pagination, Navigation, Autoplay]}
-      className='w-full relative avisos-slider'>
+      className="w-full relative avisos-slider"
+    >
       {children}
     </StyledSwiper>
-  )
+  );
 }
 
-export default Swiper
+export default Swiper;
