@@ -7,6 +7,7 @@ import SectionComponent from '../SectionComponent'
 import ConvocatoriasCard from './ConvocatoriasCard'
 import usePagination from '../../hooks/usePagination'
 import useWindowSize from '../../hooks/useWindowSize'
+import {ModalSolicitud} from './ModalSolicitud'
 
 interface ConvocatoriasComponent {
   convocatorias: Convocatoria[]
@@ -35,6 +36,7 @@ function Convocatorias({
 
   return (
     <Fragment>
+      <ModalSolicitud />
       <SectionComponent sectionProps='pt-0 px-0' containerProps='max-w-8xl'>
         <div className='w-full h-64 lg:h-80 relative flex flex-col justify-center items-center'>
           <img
