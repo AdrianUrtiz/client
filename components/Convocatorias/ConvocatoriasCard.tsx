@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Convocatoria } from "../../ts/interfaces";
 import useStrapiMedia from "../../hooks/useStrapiMedia";
 import { downloadCurrentFile, getDate } from "../../utils/api";

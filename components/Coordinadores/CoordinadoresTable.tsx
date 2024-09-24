@@ -1,23 +1,23 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
 interface Coordinador {
-  Coordinador: string
-  Correo: string
-  Programa: string
-  Modalidad: string
+  Coordinador: string;
+  Correo: string;
+  Programa: string;
+  Modalidad: string;
 }
 
 interface CoordinadoresTableProps {
-  coordinadores?: Coordinador[] // Hacer que la propiedad sea opcional
+  coordinadores?: Coordinador[]; // Hacer que la propiedad sea opcional
 }
 
 function CoordinadoresTable({ coordinadores = [] }: CoordinadoresTableProps) {
   return (
     <Fragment>
-      <table className='w-full table-fixed mt-8'>
-        <thead className='text-white'>
-          <tr className='w-full bg-darkBlue text-center'>
-            <th className='py-5'>Coordinador</th>
+      <table className="w-full table-fixed mt-8">
+        <thead className="text-white">
+          <tr className="w-full bg-darkBlue text-center">
+            <th className="py-5">Coordinador</th>
             <th>Correo</th>
             <th>Programa</th>
             <th>Modalidad</th>
@@ -28,16 +28,28 @@ function CoordinadoresTable({ coordinadores = [] }: CoordinadoresTableProps) {
             coordinadores.map((coordinador, index) => (
               <tr
                 key={index}
-                className='min-h-full h-auto odd:bg-blue-700/10 even:bg-white border-y-2 text-center'>
-                <td className='p-8'>{coordinador.Coordinador}</td>
-                <td className='text-blue-600'><a href={`mailto:${coordinador.Correo}`} target='_blank'>{coordinador.Correo}</a></td>
+                className="min-h-full h-auto odd:bg-blue-700/10 even:bg-white border-y-2 text-center"
+              >
+                <td className="p-8">{coordinador.Coordinador}</td>
+                <td className="text-blue-600">
+                  <a
+                    href={`mailto:${coordinador.Correo}`}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {coordinador.Correo}
+                  </a>
+                </td>
                 <td>{coordinador.Programa}</td>
                 <td>{coordinador.Modalidad}</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan={5} className='text-center py-5 bg-blue-700/10 text-darkBlue font-semibold'>
+              <td
+                colSpan={5}
+                className="text-center py-5 bg-blue-700/10 text-darkBlue font-semibold"
+              >
                 No se encontraron resultados para esta búsqueda
               </td>
             </tr>
@@ -45,7 +57,7 @@ function CoordinadoresTable({ coordinadores = [] }: CoordinadoresTableProps) {
         </tbody>
       </table>
     </Fragment>
-  )
+  );
 }
 
-export default CoordinadoresTable
+export default CoordinadoresTable;
