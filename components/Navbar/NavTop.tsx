@@ -38,8 +38,12 @@ function NavTop() {
                       key={i}
                       className="font-base font-medium group whitespace-nowrap relative"
                     >
-                      <Link href={link.href}>
-                        <a className="rounded-lg py-2 px-4 transition ease-in duration-300 hover:cursor-pointer hover:bg-opacity-40 hover:bg-sky-700">
+                      <Link href={link.href} passHref>
+                        <a
+                          target={link.target ? link.target : undefined}
+                          rel={link.rel ? link.rel : undefined}
+                          className="rounded-lg py-2 px-4 transition ease-in duration-300 hover:cursor-pointer hover:bg-opacity-40 hover:bg-sky-700"
+                        >
                           {link.text}
                         </a>
                       </Link>
