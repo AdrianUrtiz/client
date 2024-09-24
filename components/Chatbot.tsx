@@ -4,7 +4,7 @@ import { MEDIA } from '../utils/media'
 
 function Chatbot() {
   return (
-    <Fragment>
+    <Fragment >
       <Script src='https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1' />
       <df-messenger
         intent='WELCOME'

@@ -9,7 +9,9 @@ function Layout({ children }: ChildrenJSXProps) {
     <Fragment>
       <NavTop />
       <main className="relative">{children}</main>
-      <Chatbot />
+      <div className=" hidden">
+       <Chatbot />
+      </div>
       <Footer />
     </Fragment>
   );
