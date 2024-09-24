@@ -30,7 +30,7 @@ function CoordinadoresTable({ coordinadores = [] }: CoordinadoresTableProps) {
                 key={index}
                 className='min-h-full h-auto odd:bg-blue-700/10 even:bg-white border-y-2 text-center'>
                 <td className='p-8'>{coordinador.Coordinador}</td>
-                <td className='text-blue-600'><a href={`mailto:${coordinador.Correo}`}>{coordinador.Correo}</a></td>
+                <td className='text-blue-600'><a href={`mailto:${coordinador.Correo}`} target='_blank'>{coordinador.Correo}</a></td>
                 <td>{coordinador.Programa}</td>
                 <td>{coordinador.Modalidad}</td>
               </tr>
