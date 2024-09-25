@@ -14,7 +14,9 @@ function NavTop() {
         <div className="container mx-auto w-full">
           <div className="py-5 px-4 flex justify-between flex-wrap sm:flex-no-wrap md:flex-wrap items-center text-white">
             <Link href="/">
-              <a className="w-3/4 flex md:hidden">
+              <a
+                className={`w-3/4 flex md:hidden relative top-10 ${menuIsOpen && width && width < 768 ? "mb-10" : ""} `}
+              >
                 <Image
                   width={800}
                   height={80}
@@ -23,7 +25,7 @@ function NavTop() {
                 />
               </a>
             </Link>
-            <div className="flex-row items-center gap-6 hidden md:flex">
+            <div className="flex flex-row items-center gap-6">
               {" "}
               <Link href="/">
                 <a className="hidden md:flex">
@@ -73,16 +75,14 @@ function NavTop() {
                       )}
                     </li>
                   ))}
+                  <a>
+                    <div className="text-white text-xl hidden md:block">|</div>
+                  </a>
+                  <a>
+                    <span className="font-normal text-xl">DEPI</span>
+                  </a>
                 </ul>
               </div>
-              <a>
-                <div className="text-white text-xl hidden md:block">|</div>
-              </a>
-              <a>
-                <span className="font-normal text-xl hidden md:block">
-                  DEPI
-                </span>
-              </a>
             </div>
             <div className="ml-auto md:hidden">
               {menuIsOpen && width && width < 768 ? (
