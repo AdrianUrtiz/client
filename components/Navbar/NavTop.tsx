@@ -13,7 +13,17 @@ function NavTop() {
       <nav className="bg-darkBlue shadow sticky top-0 z-50 w-full">
         <div className="container mx-auto w-full">
           <div className="py-5 px-4 flex justify-between flex-wrap sm:flex-no-wrap md:flex-wrap items-center text-white">
-            <div className="flex flex-row items-center gap-6">
+            <Link href="/">
+              <a className="w-3/4 flex md:hidden">
+                <Image
+                  width={800}
+                  height={80}
+                  src={MEDIA.LOGOSNAVBAR}
+                  alt={MEDIA.LOGOSNAVBAR}
+                />
+              </a>
+            </Link>
+            <div className="flex-row items-center gap-6 hidden md:flex">
               {" "}
               <Link href="/">
                 <a className="hidden md:flex">
@@ -66,10 +76,12 @@ function NavTop() {
                 </ul>
               </div>
               <a>
-                <div className="text-white text-xl">|</div>
+                <div className="text-white text-xl hidden md:block">|</div>
               </a>
               <a>
-                <span className="font-normal text-xl">DEPII</span>
+                <span className="font-normal text-xl hidden md:block">
+                  DEPI
+                </span>
               </a>
             </div>
             <div className="ml-auto md:hidden">

@@ -55,7 +55,7 @@ export const ModalSolicitud = () => {
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
                         Da click en el botón para descargar tu solicitud de
-                        admisión a la maestría
+                        admisión a Posgrado
                       </p>
                     </div>
                   </div>
@@ -64,7 +64,7 @@ export const ModalSolicitud = () => {
               <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <a href="/solicitud-maestria.pdf" download>
                   <button
-                  onClick={handleCloseModal}
+                    onClick={handleCloseModal}
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-darkBlue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-darkBlue/90 sm:ml-3 sm:w-auto"
                   >
